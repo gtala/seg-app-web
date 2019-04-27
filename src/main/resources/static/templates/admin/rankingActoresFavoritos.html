@@ -1,0 +1,18 @@
+<div class="container" ng-controller="adminRankingController">
+  <table class="table table-striped" ng-show="ranking">
+    <tbody>
+      <tr>
+        <th>#</th>
+        <th>Nombre</th>
+      </tr>
+      <tr ng-repeat="actor in ranking">
+        <td>{{actor.id}}</td>
+        <td>
+          <a ui-sref="fichaPersona({fichaId:actor.id})">
+            <p>{{actor.name}}</p>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
